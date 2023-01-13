@@ -22,11 +22,11 @@ class LoginPage extends StatelessWidget {
     return Container(
       height: 100,
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.blue, Colors.green],
-          begin: Alignment.bottomLeft,
-          end: Alignment.topLeft,
-        ),
+        // image: DecorationImage(
+        //   image: AssetImage("assets/images/bghero.png"),
+        // ),
+        // color: Colors.mintgreen[4df7aa],
+        color: const Color(0xFF7D9D9C),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -40,13 +40,15 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 60,
+                color: const Color(0xFFEFEAE2),
               ),
             ),
             const Text(
               "Never miss another event due to a cluttered inbox",
               style: TextStyle(
                 fontFamily: 'Poppins',
-                fontSize: 15,
+                color: Colors.white,
+                fontSize: 14,
               ),
             ),
             const SizedBox(height: 10),
@@ -61,10 +63,12 @@ class LoginPage extends StatelessWidget {
                   backgroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  final provider =
-                      Provider.of<GoogleSignInProvider>(context, listen: false);
-                  provider.googleLogin();
-                  GoogleSignIn().signIn();
+                  // final provider =
+                  //     Provider.of<GoogleSignInProvider>(context, listen: false);
+                  // provider.googleLogin();
+                  // GoogleSignIn().signIn();
+
+                  Navigator.pushNamed(context, HomePage.id);
                 },
                 icon: const FaIcon(
                   FontAwesomeIcons.google,
@@ -80,30 +84,30 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 100, right: 100, top: 20, bottom: 20),
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, HomePage.id);
-                },
-                icon: const FaIcon(
-                  FontAwesomeIcons.home,
-                  color: Colors.red,
-                ),
-                label: const Text(
-                  "Home page",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      fontSize: 15),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(
+            //       left: 100, right: 100, top: 20, bottom: 20),
+            //   child: ElevatedButton.icon(
+            //     style: ElevatedButton.styleFrom(
+            //       backgroundColor: Colors.white,
+            //     ),
+            //     onPressed: () {
+            //       Navigator.pushNamed(context, HomePage.id);
+            //     },
+            //     icon: const FaIcon(
+            //       FontAwesomeIcons.home,
+            //       color: Colors.red,
+            //     ),
+            //     label: const Text(
+            //       "   Home page    ",
+            //       style: TextStyle(
+            //           color: Colors.black,
+            //           fontWeight: FontWeight.w500,
+            //           fontFamily: 'Poppins',
+            //           fontSize: 15),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
