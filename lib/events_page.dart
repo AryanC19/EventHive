@@ -266,7 +266,7 @@ class HomePage extends StatelessWidget {
                       fontFamily: "Poppins",
                       color: const Color(0xFFEFEAE2),
                     ),
-                    "Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text ",
+                    "A fun 36 hour long hackathon conducted by Vinnovate IT",
                   ),
                 ],
               ),

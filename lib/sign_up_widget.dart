@@ -84,30 +84,30 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(
-            //       left: 100, right: 100, top: 20, bottom: 20),
-            //   child: ElevatedButton.icon(
-            //     style: ElevatedButton.styleFrom(
-            //       backgroundColor: Colors.white,
-            //     ),
-            //     onPressed: () {
-            //       Navigator.pushNamed(context, HomePage.id);
-            //     },
-            //     icon: const FaIcon(
-            //       FontAwesomeIcons.home,
-            //       color: Colors.red,
-            //     ),
-            //     label: const Text(
-            //       "   Home page    ",
-            //       style: TextStyle(
-            //           color: Colors.black,
-            //           fontWeight: FontWeight.w500,
-            //           fontFamily: 'Poppins',
-            //           fontSize: 15),
-            //     ),
-            //   ),
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 100, right: 100, top: 20, bottom: 20),
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, HomePage.id);
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.home,
+                  color: Colors.red,
+                ),
+                label: const Text(
+                  "   Home page    ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                      fontSize: 15),
+                ),
+              ),
+            ),
           ],
         ),
       ),
