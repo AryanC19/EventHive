@@ -98,26 +98,38 @@ class HomePage extends StatelessWidget {
                     Row(
                       children: [],
                     ),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
                   ],
                 ),
                 ListView(
                   children: [
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
                   ],
                 ),
                 ListView(
                   children: [
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
-                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
+                    buildCard(
+                        "Vinhack", "Homi Baba Gallery", "9:30 am", "13/01/23"),
                   ],
                 ),
                 ListView(
@@ -161,7 +173,8 @@ class HomePage extends StatelessWidget {
         ),
       );
 
-  Widget buildCard(String title, String venue, String date) => Padding(
+  Widget buildCard(String title, String venue, String time, String date) =>
+      Padding(
         padding: EdgeInsets.all(10),
         child: Card(
           shape: RoundedRectangleBorder(
@@ -170,7 +183,7 @@ class HomePage extends StatelessWidget {
           color: const Color(0xFF7D9D9C),
           child: ExpandablePanel(
             header: Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -186,6 +199,14 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+                ],
+              ),
+            ),
+            collapsed: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   Text(
                     venue,
                     style: TextStyle(
@@ -195,26 +216,49 @@ class HomePage extends StatelessWidget {
                       color: const Color(0xFFEFEAE2),
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    time,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    date,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                  ),
+                  Text(
+                    "  ",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                  ),
                 ],
-              ),
-            ),
-            collapsed: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                date,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: "Poppins",
-                  color: const Color(0xFFEFEAE2),
-                ),
               ),
             ),
             expanded: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
-                children: const [
-                  const Image(
-                    image: AssetImage('images/poster.png'),
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 5),
+                      borderRadius: BorderRadius.circular(20), //<-- SEE HERE
+                    ),
+                    child: Image.asset('images/poster.png'),
                   ),
                   Text(
                     style: TextStyle(
