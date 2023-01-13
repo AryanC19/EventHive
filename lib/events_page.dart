@@ -98,41 +98,26 @@ class HomePage extends StatelessWidget {
                     Row(
                       children: [],
                     ),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
                   ],
                 ),
                 ListView(
                   children: [
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
                   ],
                 ),
                 ListView(
                   children: [
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
-                    buildCard("Title", "S"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
+                    buildCard("Vinhack", "Homi Baba Gallery", "13/01/23"),
                   ],
                 ),
                 ListView(
@@ -176,7 +161,7 @@ class HomePage extends StatelessWidget {
         ),
       );
 
-  Widget buildCard(String title, String urlImage) => Padding(
+  Widget buildCard(String title, String venue, String date) => Padding(
         padding: EdgeInsets.all(10),
         child: Card(
           shape: RoundedRectangleBorder(
@@ -202,7 +187,7 @@ class HomePage extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Venue",
+                    venue,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -216,7 +201,7 @@ class HomePage extends StatelessWidget {
             collapsed: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "01/01/23",
+                date,
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Poppins",
@@ -229,7 +214,7 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: const [
                   const Image(
-                    image: AssetImage('images/bghero.png'),
+                    image: AssetImage('images/poster.png'),
                   ),
                   Text(
                     style: TextStyle(
