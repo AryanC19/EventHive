@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           child: Scaffold(
+            backgroundColor: const Color(0xFFEFEAE2),
             appBar: AppBar(
               title: const Text(
                 "Event Hive",
@@ -94,6 +95,9 @@ class HomePage extends StatelessWidget {
               children: [
                 ListView(
                   children: [
+                    Row(
+                      children: [],
+                    ),
                     buildCard("Title", "S"),
                     buildCard("Title", "S"),
                     buildCard("Title", "S"),
@@ -145,7 +149,7 @@ class HomePage extends StatelessWidget {
                                 TextStyle(fontSize: 35, fontFamily: "Poppins"),
                           ),
                           SizedBox(
-                            height: 40,
+                            height: 10,
                           ),
                           CircleAvatar(
                             radius: 40,
@@ -153,11 +157,13 @@ class HomePage extends StatelessWidget {
                           ),
                           Text(
                             user.displayName!,
-                            style: TextStyle(fontSize: 35),
+                            style:
+                                TextStyle(fontSize: 35, fontFamily: "Poppins"),
                           ),
                           Text(
                             user.email!,
-                            style: TextStyle(fontSize: 15),
+                            style:
+                                TextStyle(fontSize: 15, fontFamily: "Poppins"),
                           ),
                         ],
                       ),
@@ -180,14 +186,31 @@ class HomePage extends StatelessWidget {
           child: ExpandablePanel(
             header: Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Poppins",
-                  color: const Color(0xFFEFEAE2),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "Venue",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                  ),
+                ],
               ),
             ),
             collapsed: Padding(
@@ -203,13 +226,20 @@ class HomePage extends StatelessWidget {
             ),
             expanded: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: "Poppins",
-                  color: const Color(0xFFEFEAE2),
-                ),
-                "Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text ",
+              child: Column(
+                children: const [
+                  const Image(
+                    image: AssetImage('images/bghero.png'),
+                  ),
+                  Text(
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Poppins",
+                      color: const Color(0xFFEFEAE2),
+                    ),
+                    "Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text ",
+                  ),
+                ],
               ),
             ),
           ),

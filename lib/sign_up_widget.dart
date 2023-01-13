@@ -20,7 +20,6 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
       decoration: const BoxDecoration(
         // image: DecorationImage(
         //   image: AssetImage("assets/images/bghero.png"),
@@ -51,7 +50,6 @@ class LoginPage extends StatelessWidget {
                 fontSize: 14,
               ),
             ),
-            const SizedBox(height: 10),
             const SizedBox(
               height: 200,
             ),
@@ -60,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   left: 100, right: 100, top: 20, bottom: 20),
               child: ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: const Color(0xFFEFEAE2),
                 ),
                 onPressed: () {
                   // final provider =
@@ -72,12 +70,14 @@ class LoginPage extends StatelessWidget {
                 },
                 icon: const FaIcon(
                   FontAwesomeIcons.google,
-                  color: Colors.red,
+                  color: Colors.blue,
                 ),
                 label: const Text(
                   "Sign in with google",
                   style: TextStyle(
                       color: Colors.black,
+                      // color: const Color(0xFFEFEAE2),
+
                       fontWeight: FontWeight.w500,
                       fontFamily: 'Poppins',
                       fontSize: 15),
