@@ -37,6 +37,7 @@ class LoginPage extends StatelessWidget {
             const Text(
               "Event Hive",
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 fontFamily: 'Poppins',
                 fontSize: 60,
                 color: const Color(0xFFEFEAE2),
@@ -50,12 +51,47 @@ class LoginPage extends StatelessWidget {
                 fontSize: 14,
               ),
             ),
-            const SizedBox(
-              height: 200,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  icon: Icon(Icons.person),
+                  hintText: 'Enter Name',
+                  labelText: 'Name ',
+                ),
+                onSaved: (String? value) {
+                  // This optional block of code can be used to run
+                  // code when the user saves the form.
+                },
+                validator: (String? value) {
+                  return (value != null && value.contains('@'))
+                      ? 'Do not use the @ char.'
+                      : null;
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  icon: Icon(Icons.password),
+                  hintText: 'Enter Password',
+                  labelText: 'Password',
+                ),
+                onSaved: (String? value) {
+                  // This optional block of code can be used to run
+                  // code when the user saves the form.
+                },
+                validator: (String? value) {
+                  return (value != null && value.contains('@'))
+                      ? 'Do not use the @ char.'
+                      : null;
+                },
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 100, right: 100, top: 20, bottom: 20),
+                  left: 100, right: 100, top: 20, bottom: 10),
               child: ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFEFEAE2),
@@ -86,27 +122,12 @@ class LoginPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 100, right: 100, top: 20, bottom: 20),
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, HomePage.id);
-                },
-                icon: const FaIcon(
-                  FontAwesomeIcons.home,
-                  color: Colors.red,
-                ),
-                label: const Text(
-                  "   Home page    ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      fontSize: 15),
-                ),
-              ),
+                  left: 100, right: 100, top: 10, bottom: 20),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, HomePage.id);
+                  },
+                  child: Text("Already a User?  Sign In")),
             ),
           ],
         ),

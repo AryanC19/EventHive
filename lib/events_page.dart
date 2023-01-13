@@ -5,8 +5,24 @@ import 'package:google_fonts/google_fonts.dart';
 import 'sign_up_widget.dart';
 import 'package:provider/provider.dart';
 import 'google_sign_in.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class HomePage extends StatelessWidget {
+  // getData() async {
+  //   String responce;
+  //   responce = await rootBundle.loadString("text/my_text.txt");
+  //
+  //   setState(() {
+  //     textFromFile = responce;
+  //   });
+  //
+  //   clear() {
+  //     setState(() {
+  //       textFromFile = "Empty";
+  //     });
+  //   }
+  // }
+
   final user = FirebaseAuth.instance.currentUser!;
 
   static String id = "HomePage";
