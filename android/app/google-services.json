@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "999071473718",
+    "project_id": "eventhive-67308",
+    "storage_bucket": "eventhive-67308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999071473718:android:4081b4e26524d72d6a3897",
+        "android_client_info": {
+          "package_name": "com.example.vinhh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999071473718-lnatblg75rbig1km2ia889n8lfs69q3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZIXCjBUGkCiMdv0CpoDqbZqIigcf60H8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999071473718-lnatblg75rbig1km2ia889n8lfs69q3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
