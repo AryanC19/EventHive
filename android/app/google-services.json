@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "999071473718",
+    "firebase_url": "https://eventhive-67308-default-rtdb.firebaseio.com",
     "project_id": "eventhive-67308",
     "storage_bucket": "eventhive-67308.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:999071473718:android:4081b4e26524d72d6a3897",
+        "mobilesdk_app_id": "1:999071473718:android:986504117a737b946a3897",
         "android_client_info": {
           "package_name": "com.example.vinhh"
         }

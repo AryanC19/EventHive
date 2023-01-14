@@ -6,7 +6,7 @@ import 'events_page.dart';
 import 'package:provider/provider.dart';
 import 'google_sign_in.dart';
 
-import 'user_info_page.dart';
+import 'logged_in_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,13 +17,13 @@ class HomePage extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());
             } else if (snapshot.hasData) {
-              return InfoPage();
+              return LoggedInWidget();
             } else if (snapshot.hasError) {
               return const Center(
                 child: Text("Something went wrong!"),
               );
             } else {
-              return LoginPage();
+              return SignUpWidget();
             }
           },
         ),

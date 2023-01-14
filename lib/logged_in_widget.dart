@@ -6,8 +6,9 @@ import 'events_page.dart';
 import 'package:provider/provider.dart';
 import 'google_sign_in.dart';
 
-class InfoPage extends StatelessWidget {
+class LoggedInWidget extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
+  static String id = "LoggedInPage";
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,10 @@ class InfoPage extends StatelessWidget {
                   Provider.of<GoogleSignInProvider>(context, listen: false);
               provider.logout();
             },
-            child: Text("Logout"),
+            child: Text(
+              "Logout",
+              style: TextStyle(color: Colors.red),
+            ),
           )
         ],
       ),

@@ -12,22 +12,23 @@ import 'events_page.dart';
 import 'package:provider/provider.dart';
 import 'google_sign_in.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpWidget extends StatelessWidget {
   static String id = "LoginPage";
 
-  const LoginPage({super.key});
+  const SignUpWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        // image: DecorationImage(
-        //   image: AssetImage("assets/images/bghero.png"),
-        // ),
-        // color: Colors.mintgreen[4df7aa],
-        color: const Color(0xFF7D9D9C),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        image: DecorationImage(
+          image: AssetImage("images/bghero.png"),
+          fit: BoxFit.cover,
+        ),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: Column(
           children: <Widget>[
@@ -43,6 +44,9 @@ class LoginPage extends StatelessWidget {
                 color: const Color(0xFFEFEAE2),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             const Text(
               "Never miss another event due to a cluttered inbox",
               style: TextStyle(
@@ -50,6 +54,9 @@ class LoginPage extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 14,
               ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -97,12 +104,12 @@ class LoginPage extends StatelessWidget {
                   backgroundColor: const Color(0xFFEFEAE2),
                 ),
                 onPressed: () {
-                  // final provider =
-                  //     Provider.of<GoogleSignInProvider>(context, listen: false);
-                  // provider.googleLogin();
-                  // GoogleSignIn().signIn();
+                  final provider =
+                      Provider.of<GoogleSignInProvider>(context, listen: false);
+                  provider.googleLogin();
+                  GoogleSignIn().signIn();
 
-                  Navigator.pushNamed(context, HomePage.id);
+                  // Navigator.pushNamed(context, HomePage.id);
                 },
                 icon: const FaIcon(
                   FontAwesomeIcons.google,

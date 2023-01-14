@@ -33,10 +33,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) => DefaultTabController(
         length: 4,
         child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/bghero.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           height: double.infinity,
           width: double.infinity,
           child: Scaffold(
-            backgroundColor: const Color(0xFFEFEAE2),
+            resizeToAvoidBottomInset: false,
+            backgroundColor: Colors.transparent,
             appBar: AppBar(
               title: const Text(
                 "Event Hive",
@@ -50,14 +57,17 @@ class HomePage extends StatelessWidget {
               leading: IconButton(
                 icon: const Icon(Icons.menu),
                 onPressed: () {
-                  Navigator.pushNamed(context, LoginPage.id);
+                  Navigator.pushNamed(context, SignUpWidget.id);
                 },
               ),
               actions: [],
               // backgroundColor: Colors.green,
               flexibleSpace: Container(
-                decoration: const BoxDecoration(
-                  color: const Color(0xFF7D9D9C),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("images/bghero.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               bottom: const TabBar(
@@ -192,99 +202,108 @@ class HomePage extends StatelessWidget {
   Widget buildCard(String title, String venue, String time, String date) =>
       Padding(
         padding: EdgeInsets.all(10),
-        child: Card(
-          shape: RoundedRectangleBorder(
+        child: Container(
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: AssetImage("images/bghero.png"),
+              fit: BoxFit.cover,
+            ),
           ),
-          color: const Color(0xFF7D9D9C),
-          child: ExpandablePanel(
-            header: Padding(
-              padding: const EdgeInsets.all(12),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
-              ),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
             ),
-            collapsed: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    venue,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
+            color: Colors.transparent,
+            child: ExpandablePanel(
+              header: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    time,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
+                    SizedBox(
+                      height: 10,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    date,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
-                    ),
-                  ),
-                  Text(
-                    "  ",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            expanded: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 5),
-                      borderRadius: BorderRadius.circular(20), //<-- SEE HERE
+              collapsed: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      venue,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
                     ),
-                    child: Image.asset('images/poster.png'),
-                  ),
-                  Text(
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "Poppins",
-                      color: const Color(0xFFEFEAE2),
+                    SizedBox(
+                      height: 10,
                     ),
-                    "A fun 36 hour long hackathon conducted by Vinnovate IT",
-                  ),
-                ],
+                    Text(
+                      time,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      date,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
+                    ),
+                    Text(
+                      "  ",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              expanded: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 5),
+                        borderRadius: BorderRadius.circular(20), //<-- SEE HERE
+                      ),
+                      child: Image.asset('images/poster.png'),
+                    ),
+                    Text(
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        color: const Color(0xFFEFEAE2),
+                      ),
+                      "A fun 36 hour long hackathon conducted by Vinnovate IT",
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

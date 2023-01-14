@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:vinhh/logged_in_widget.dart';
 import 'sign_up_widget.dart';
 import 'events_page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -21,10 +22,11 @@ class MyApp extends StatelessWidget {
         create: (context) => GoogleSignInProvider(),
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: LoginPage.id,
+          initialRoute: HomePage.id,
           routes: {
             HomePage.id: (context) => HomePage(),
-            LoginPage.id: (context) => LoginPage(),
+            SignUpWidget.id: (context) => SignUpWidget(),
+            LoggedInWidget.id: (context) => LoggedInWidget(),
           },
         ),
       );
